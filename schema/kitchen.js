@@ -91,4 +91,4 @@ const Kitchens=mongoose.model('Kitchens',kitchen)
 
 
 
-module.exports={Kitchens}
+module.exports=Kitchens
