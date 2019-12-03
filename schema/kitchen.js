@@ -12,8 +12,7 @@ const kitchen=mongoose.Schema({
          address:{
              name:{
                  type:String,
-                 
-             },
+                 },
              location:
              {
             type:{
@@ -76,7 +75,7 @@ const kitchen=mongoose.Schema({
          proof:
          {
              id_number:Number,
-             id_Photo:[String]
+             id_Photo_url:[String]
          }
 },{collection:'Kitchens',timestamps:true})
 
