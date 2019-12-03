@@ -7,6 +7,7 @@ const port=process.env.PORT||3000
 const User = require('./schema/user')
 require('./schema/food_section')
 require('./schema/food_category')
+require('./schema/all_offered_dishes')
 app.use(bodyParser.json());
 app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: false }));

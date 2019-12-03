@@ -4,8 +4,8 @@ const mongoose=require('mongoose')
 const foodCategory=mongoose.Schema({
     name:{
         type:String,
-        createdAt:Date,
-        unique:true
+        unique:true,
+        required:true
     }},{collection:'FoodCategory',timestamps:true})
 
 

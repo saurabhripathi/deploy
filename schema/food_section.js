@@ -3,6 +3,7 @@ const foodSection=mongoose.Schema({
     name:{
         type:String,
         unique:true,
+        required:true
     },
 },{collection:'FoodSection',timestamps:true})
 
