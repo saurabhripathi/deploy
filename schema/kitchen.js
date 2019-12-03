@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 const kitchen=mongoose.Schema({
-    name:{
+    kitchen_name:{
         type:String,
         required:true
         },
@@ -11,15 +11,13 @@ const kitchen=mongoose.Schema({
          },
          address:{
              name:{
-                 type:String,
-                 
-             },
+                 type:String
+                 },
              location:
              {
             type:{
                 type: String, 
-                enum: ['Point'],
-             
+                enum: ['Point']
             },
             coordinates: {
                 type: [Number],
@@ -60,14 +58,13 @@ const kitchen=mongoose.Schema({
              type:Boolean,
              default:false
          },
-         kitchen_picture:
+         kitchen_picture_url:
          {
              type:String
          },
          overall_dishes:
          {
-             type:[{ type: mongoose.Schema.Types.ObjectId,
-                ref: 'dishes'}]
+             type:mongoose.Schema.Types.ObjectId
          },
          kitchen_chef:
          {
@@ -76,12 +73,17 @@ const kitchen=mongoose.Schema({
          proof:
          {
              id_number:Number,
-             id_Photo:[String]
+             id_Photo_url:[String]
+         },
+         Offers:
+         {
+             type:[{dish_id:mongoose.Schema.Types.ObjectId}]
+             
          }
 },{collection:'Kitchens',timestamps:true})
 
 kitchen.index({
-    name:1,
+    kitchen_name:1,
     email_id: 1,
     phonenumber: 1,
   }, {

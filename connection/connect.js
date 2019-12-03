@@ -3,7 +3,7 @@ mongoose.connect('mongodb+srv://saurabh:Infy@123@cluster0-zxhxb.mongodb.net/Data
     useNewUrlParser:true,useCreateIndex:true,useUnifiedTopology: true},(error,result)=>{
         if(error)
         {
-            console.log(error)
+            console.log(error);
         }
     })
 
