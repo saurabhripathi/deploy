@@ -8,6 +8,7 @@ const User = require('./schema/user')
 require('./schema/food_section')
 require('./schema/food_category')
 require('./schema/all_offered_dishes')
+require('./schema/kitchen')
 app.use(bodyParser.json());
 app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -28,11 +29,12 @@ app.get('/',async(req,res)=>{
 
 app.post('/save',async(req,res)=>{
     console.log(req.body)
-    const user=new User(req.body)
-    try{
-        
     
-         await user.save()
+    try{
+        const user=new Kitchens(req.body)
+    
+      var z= await user.save()
+      res.status(200).send("ok")
     }
    catch(e)
    {
